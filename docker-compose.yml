@@ -1,0 +1,56 @@
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./gateway
+    ports:
+      - "6091:6091"
+    environment:
+      - PORT=6091
+    depends_on:
+      - consul
+      - product
+      - order
+
+  consul:
+    image: consul:latest
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ecommerce
+    ports:
+      - "5432:5432"
+
+  product:
+    build: .
+    command: ./product
+    environment:
+      - DB_TYPE=postgres
+      - DATABASE_URL=host=postgres user=postgres password=postgres dbname=ecommerce port=5432 sslmode=disable
+    depends_on:
+      - consul
+      - postgres
+    ports:
+      - "50051:50051"
+
+  order:
+    build: .
+    command: ./order
+    environment:
+      - DB_TYPE=postgres
+      - DATABASE_URL=host=postgres user=postgres password=postgres dbname=ecommerce port=5432 sslmode=disable
+    depends_on:
+      - consul
+      - product
+    ports:
+      - "50052:50052"
+
+volumes:
+  pgdata:
