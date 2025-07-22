@@ -8,9 +8,6 @@ build:
 	done
 
 run-grid:
-	@echo "Setting up SQLite development environment..."
-	@cp .env.local .env 2>/dev/null || true
-	@echo "Environment configured for SQLite. Starting application..."
 	@tmux new-session -d -s commercify-dev -n services
 
 	# Pane 0: Start Consul agent in dev mode

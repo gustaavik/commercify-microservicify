@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	err := godotenv.Load("../../.env")
+	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
@@ -50,7 +50,7 @@ func main() {
 	healthServer.SetServingStatus("", healthpb.HealthCheckResponse_SERVING)
 
 	// --- 5. Start listener ---
-	address := common.GetEnv("PRODUCT_SERVICE_URL", ":60002")
+	address := common.GetEnv("SERVICE_URL", ":60002")
 	lis, err := net.Listen("tcp", address)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
