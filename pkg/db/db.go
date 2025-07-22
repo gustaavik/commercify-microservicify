@@ -5,10 +5,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/zenfulcode/commercifyms/pkg/common"
 	"gorm.io/driver/postgres"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
+	"zenfulcode.com/commercifyms/pkg/common"
 )
 
 func Init() *gorm.DB {

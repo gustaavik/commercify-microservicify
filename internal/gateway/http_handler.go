@@ -3,9 +3,9 @@ package gateway
 import (
 	"net/http"
 
-	orderpb "github.com/zenfulcode/commercifyms/api/order"
-	productpb "github.com/zenfulcode/commercifyms/api/product"
-	"github.com/zenfulcode/commercifyms/pkg/common"
+	orderpb "zenfulcode.com/commercifyms/api/order"
+	productpb "zenfulcode.com/commercifyms/api/product"
+	"zenfulcode.com/commercifyms/pkg/common"
 )
 
 type handler struct {

@@ -5,12 +5,12 @@ import (
 	"net"
 
 	"github.com/joho/godotenv"
-	"github.com/zenfulcode/commercifyms/internal/products"
-	"github.com/zenfulcode/commercifyms/pkg/common"
-	"github.com/zenfulcode/commercifyms/pkg/db"
-	"github.com/zenfulcode/commercifyms/pkg/trpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/health"
+	"zenfulcode.com/commercifyms/internal/products"
+	"zenfulcode.com/commercifyms/pkg/common"
+	"zenfulcode.com/commercifyms/pkg/db"
+	"zenfulcode.com/commercifyms/pkg/trpc"
 
 	healthpb "google.golang.org/grpc/health/grpc_health_v1"
 )

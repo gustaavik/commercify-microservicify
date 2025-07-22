@@ -10,9 +10,9 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 
 	"github.com/hashicorp/consul/api"
-	orderpb "github.com/zenfulcode/commercifyms/api/order"
-	productpb "github.com/zenfulcode/commercifyms/api/product"
-	"github.com/zenfulcode/commercifyms/pkg/common"
+	orderpb "zenfulcode.com/commercifyms/api/order"
+	productpb "zenfulcode.com/commercifyms/api/product"
+	"zenfulcode.com/commercifyms/pkg/common"
 )
 
 func connectToService(serviceName string) *grpc.ClientConn {

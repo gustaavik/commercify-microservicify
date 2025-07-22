@@ -3,7 +3,7 @@ package orders
 import (
 	"context"
 
-	pb "github.com/zenfulcode/commercifyms/api/product"
+	pb "zenfulcode.com/commercifyms/api/product"
 )
 
 type ProductGRPCClient struct {

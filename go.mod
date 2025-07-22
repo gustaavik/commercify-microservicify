@@ -1,4 +1,4 @@
-module github.com/zenfulcode/commercifyms
+module zenfulcode.com/commercifyms
 
 go 1.24.5
 

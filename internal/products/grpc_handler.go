@@ -3,10 +3,10 @@ package products
 import (
 	"context"
 
-	pb "github.com/zenfulcode/commercifyms/api/product"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	pb "zenfulcode.com/commercifyms/api/product"
 )
 
 type grpcHandler struct {

@@ -7,9 +7,9 @@ import (
 	"github.com/joho/godotenv"
 	_ "github.com/joho/godotenv/autoload"
 
-	"github.com/zenfulcode/commercifyms/internal/gateway"
-	"github.com/zenfulcode/commercifyms/pkg/common"
-	"github.com/zenfulcode/commercifyms/pkg/trpc"
+	"zenfulcode.com/commercifyms/internal/gateway"
+	"zenfulcode.com/commercifyms/pkg/common"
+	"zenfulcode.com/commercifyms/pkg/trpc"
 )
 
 func main() {

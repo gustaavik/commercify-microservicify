@@ -7,13 +7,13 @@ import (
 	"github.com/joho/godotenv"
 	_ "github.com/joho/godotenv/autoload"
 
-	"github.com/zenfulcode/commercifyms/internal/orders"
-	"github.com/zenfulcode/commercifyms/pkg/common"
-	"github.com/zenfulcode/commercifyms/pkg/db"
-	"github.com/zenfulcode/commercifyms/pkg/trpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/health"
 	healthpb "google.golang.org/grpc/health/grpc_health_v1"
+	"zenfulcode.com/commercifyms/internal/orders"
+	"zenfulcode.com/commercifyms/pkg/common"
+	"zenfulcode.com/commercifyms/pkg/db"
+	"zenfulcode.com/commercifyms/pkg/trpc"
 )
 
 func main() {

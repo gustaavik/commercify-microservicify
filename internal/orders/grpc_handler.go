@@ -3,10 +3,10 @@ package orders
 import (
 	"context"
 
-	pb "github.com/zenfulcode/commercifyms/api/order"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	pb "zenfulcode.com/commercifyms/api/order"
 )
 
 type grpcHandler struct {

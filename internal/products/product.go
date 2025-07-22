@@ -1,7 +1,7 @@
 package products
 
 import (
-	pb "github.com/zenfulcode/commercifyms/api/product"
+	pb "zenfulcode.com/commercifyms/api/product"
 )
 
 type Product struct {
